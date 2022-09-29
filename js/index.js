@@ -1,8 +1,8 @@
 //Bài tập 1: Tính tiền lương nhân viên
 document.getElementById('btnTinhLuong').onclick = function () {
-    var heSoLuong = 100000;
+    var luongMotNgay = Number(document.getElementById('luongMotNgay').value);
     var soNgayLam = Number(document.getElementById('soNgayLam').value);
-    var tienLuong = soNgayLam * heSoLuong;
+    var tienLuong = new Intl.NumberFormat('vn-VN').format(soNgayLam * luongMotNgay);
     document.getElementById('ketQuaBai1').innerHTML = tienLuong + ' VND';
 }
 //Bài 2: Tính giá trị trung bình
@@ -19,7 +19,7 @@ document.getElementById('btnTinhGiaTriTrungBinh').onclick = function () {
 document.getElementById('btnQuyDoi').onclick = function () {
     var tyGia = 23500;
     var soTienUsd = Number(document.getElementById('soTienUsd').value);
-    var tienQuyDoi = soTienUsd * tyGia;
+    var tienQuyDoi = new Intl.NumberFormat('vn-VN').format(soTienUsd * tyGia);
     document.getElementById('ketQuaBai3').innerHTML = tienQuyDoi + ' VND';
 }
 //Bài 4: Tính Diện tích, chu vi hình chữ nhật
